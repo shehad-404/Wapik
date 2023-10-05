@@ -22,6 +22,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    /* padding: 0 150px; */
 }
 header .navbar{
   
@@ -195,20 +196,26 @@ header hr{
     display: block;
     height: 120px;
     width: 4px;
-    background: rgb(242, 242, 242);
+    background: transparent; 
+    /* background: rgb(242, 242, 242); */
     margin: auto;
+    transition: .4s all ease-in-out;
 }
 .feature_icon2 .horizontal{
 
 }
-.feature_icon2 .horizontal span{
+ .horizontal span{
     display: block;
     height: 4px;
     width: 120px;
-    background: rgb(242, 242, 242);
+    background: transparent;
+    /* background: rgb(242, 242, 242); */
     margin: auto;
+    transition: .4s all ease-in-out;
 }
-
+.feature_icon2:hover .vertical span, .feature_icon2:hover .horizontal span{
+    background: rgb(242, 242, 242);
+}
 
 
 
