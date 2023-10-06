@@ -253,6 +253,13 @@ header hr{
 
 
  /* template_section  */
+ .template_section{
+    background-image: url(../images/hand_phone.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+ }
 
 .template_section:hover .feature_title span::before, .template_section:hover .feature_title span::after{
     width: 50%;
