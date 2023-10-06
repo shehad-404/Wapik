@@ -22,11 +22,8 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    /* padding: 0 150px; */
 }
-header .navbar{
-  
-}
+
 header .navbar-brand{
     color: #fff;
 }
@@ -36,7 +33,12 @@ header  .logo{
 header  .phone_num{
     font-size: 16px;
     margin-left: 20px;
+    transition: .3s all ease-in-out;
 }
+header  .phone_num:hover{
+    color: #6fb048;
+}
+
 header span{
     display: block;
     width: 1px;
@@ -48,21 +50,27 @@ header span{
 }
 
 .nav-item{
-    margin-left: 20px;
+    margin-left: 10px;
     padding: 4px 0;
 }
 .nav-link{
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-transform: uppercase;
+    transition: .3s all ease-in-out;
+    font-size: 16px;
+}
+.nav-link:hover{
+    color: #6fb048;
 }
 .btn-nav{
     background-color: #6a7f7f !important;
     padding: 10px 20px !important;
-    margin-left: 20px !important;
+    margin-left: 10px !important;
 }
 .btn-nav:hover{
     background-color: #526565 !important;
+    color: #6fb048;
 }
 header hr{
     color: rgb(255, 255, 255);
@@ -73,14 +81,9 @@ header hr{
     margin: 170px 0;
     color: #fff;
 }
-.banner_text h1{
-    
-}
+
 .banner_text p{
     margin: 20px 0;
-}
-.banner_text .btn-download{
-   
 }
 
 .btn-download{
@@ -97,6 +100,7 @@ header hr{
 
     font-size: 14px;
     border: 1px solid #797c82;
+    transition: .4s all ease-in-out;
 }
 .btn-download:hover{
     border: 1px solid #797c82;
@@ -108,18 +112,11 @@ header hr{
 .best_feature{
     margin-bottom: 100px;
 }
-.feature_title{
-    
-}
+
 .feature_title h2{
     color: #0f5f5c;
 }
-/* .feature_title span{
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #fff;
-} */
+
 .feature_title p{
     color: #83a7a5;
 }
@@ -133,8 +130,6 @@ header hr{
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    /* transition: .4s all ease-in-out; */
-    /* background-color: #008ed6; */
     position: relative;
 }
 /* change */
@@ -142,18 +137,15 @@ header hr{
     content: '';
     position: absolute;
     left: 0;
-    /* bottom: 0px; */
     height: 2px;
     width: 0;
     background-color:  #6fb048;;
-    /* color: #6fb048; */
     transition: .4s all ease-in-out;
 }
 .feature_title span::after{
     content: '';
     position: absolute;
     right: 0;
-    /* bottom: 0px; */
     height: 2px;
     width: 0;
     background-color:  #6fb048;;
@@ -164,12 +156,6 @@ header hr{
 }
 
  /* icons */
- .feature_icon1{
-    
- }
- .feature_icon1 img{
-
- }
  .feature_icon1 h5{
     margin: 20px 0;
     color: #0f5f5c;
@@ -183,45 +169,71 @@ header hr{
 .feature_icon2{
     padding: 20px 0;
 }
-.feature_icon2 .vertical{
 
-}
 .vertical span{
-    /* display: block;
-    width: 2px;
-    height: 60px;
-    background: #333333;
-    margin: auto; */
-
     display: block;
     height: 120px;
     width: 4px;
     background: transparent; 
-    /* background: rgb(242, 242, 242); */
     margin: auto;
     transition: .4s all ease-in-out;
+    position: relative;
 }
-.feature_icon2 .horizontal{
-
+.vertical span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 4px;
+    background: rgb(242, 242, 242);
+    transition: .4s all ease-in-out;
+}
+.vertical span::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 4px;
+    background: rgb(242, 242, 242);
+    transition: .4s all ease-in-out;
+}
+.feature_icon2:hover .vertical span::before, .feature_icon2:hover .vertical span::after{
+    height: 50%;
 }
  .horizontal span{
     display: block;
     height: 4px;
     width: 120px;
     background: transparent;
-    /* background: rgb(242, 242, 242); */
     margin: auto;
     transition: .4s all ease-in-out;
+    position: relative;
 }
-.feature_icon2:hover .vertical span, .feature_icon2:hover .horizontal span{
+.horizontal span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 0;
     background: rgb(242, 242, 242);
+    transition: .4s all ease-in-out;
+
+}
+.horizontal span::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 4px;
+    width: 0;
+    background: rgb(242, 242, 242);
+    transition: .4s all ease-in-out;
+
+}
+.feature_icon2:hover .horizontal span::before, .feature_icon2:hover .horizontal span::after{
+    width: 50%;
 }
 
 
-
- .feature_icon3{
-    
- }
  .icon{
     display: flex;
     margin-bottom: 20px ;
@@ -241,17 +253,7 @@ header hr{
 
 
  /* template_section  */
-.template_section{
-    /* background-color: #eef1ec; */
-    background-image: url(../images/hand_phone.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-}
-.template_section .feature_title{
 
-}
 .template_section:hover .feature_title span::before, .template_section:hover .feature_title span::after{
     width: 50%;
 }
@@ -275,17 +277,12 @@ header hr{
     font-size: 24px;
     margin-right: 10px;
 }
-/* .ready_part .icon p{
-    color: #83a7a5;
-} */
  /* template_section  ends */
 
 
 
+
  /* director_section */
-.director_section{
-    
-}
 .director_section .row{
     align-items: center;
 }
@@ -338,15 +335,16 @@ header hr{
 .pricing_section:hover .feature_title span::before, .pricing_section:hover .feature_title span::after{
     width: 50%;
 }
-.pricing_section .feature_title{
 
-}
 .col-md-4{
     padding: 0;
 }
 .pricing_box{
     border: 2px solid #83a7a5;
     padding: 20px 48px
+}
+.box_border{
+    border-right: 0;
 }
 
 .pricing_box h5{
@@ -359,16 +357,12 @@ header hr{
 .pricing_box .price h1{
     color: #0f5f5c;
 }
-.pricing_box .price p{
 
-}
 .pricing_box p{
     color: #83a7a5;
     margin-bottom: 16px;
 }
-.pricing_box a{
 
-}
 /* .plan{
     margin: auto;
 } */
@@ -401,6 +395,7 @@ header hr{
 .pricing_section .btn-download{
     background-color: #83a7a5;
     padding: 10px 20px;
+    transition: .4s all ease-in-out;
 }
 .pricing_section .btn-download:hover{
     background-color: #6fb048;
@@ -425,10 +420,7 @@ header hr{
    align-items: center;
     
 }
-.download_section .container{
-    
-    
-}
+
 .download_section h2{
     color: #0f5f5c;
     font-size: 30px;
@@ -436,24 +428,25 @@ header hr{
 .download_section p{
     color: #83a7a5;
 }
+
 .download_section .btn-download{
     padding: 12px 40px;
+    transition: .8s all ease-in-out;
+}
+.download_section .btn-download:hover{
+    background-color: transparent;
 }
 /* download_section  ends */
 
 
 
 /* footer section  */
-footer{
-    
-}
+
 footer p{
     margin-bottom: 10px;
     color: #83a7a5;
 }
-.part_1{
-    
-}
+
 .part_1 h3{
     color: #0f5f5c;
     margin-bottom: 10px;
@@ -477,6 +470,10 @@ footer p{
 .part_2 a{
     text-decoration: none;
     color: #83a7a5;
+    transition: .4s all ease-in-outlll;
+}
+.part_2 a:hover{
+    color: #6fb048;
 }
 
 
